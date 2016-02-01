@@ -2,8 +2,12 @@
 
 
 <ul>
+
 <% @bears.each do |bear| %>
-  <li><%= link_to bear.name, bear_path(bear) %></li>
+  <li><%= bear.name %>
+      <%= link_to "Edit bear", bear_path(bear) %>
+      <%= link_to "Delete this bear", bear_path(bear), method: :delete %>
+  </li>
 <% end %>
 
 </ul>
