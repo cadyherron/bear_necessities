@@ -2535,3 +2535,334 @@ Processing by BearsController#show as HTML
   [1m[35mBear Load (0.3ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 3]]
   Rendered bears/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 08:32:32 -0800
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bears/_form.html.erb (2.0ms)
+  Rendered bears/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/bears/1" for 127.0.0.1 at 2016-02-01 08:32:36 -0800
+Processing by BearsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QhS1iE/bL4uy5v9kkYTfAs4SPOyUnJaxiKPrjsHIplkT0QxwucTDX+STbJb7tR4J7otDwcXPKtXMI/FK/r4U7Q==", "bear"=>{"name"=>"Fozzy", "description"=>"A hilarious bear that has been updated"}, "commit"=>"Update Bear", "id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/bears/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/bears/1" for 127.0.0.1 at 2016-02-01 08:32:36 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bears/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears/1" for 127.0.0.1 at 2016-02-01 08:32:40 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered bears/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears/3" for 127.0.0.1 at 2016-02-01 08:32:42 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered bears/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears/3/edit" for 127.0.0.1 at 2016-02-01 08:32:45 -0800
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered bears/_form.html.erb (1.2ms)
+  Rendered bears/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 08:32:46 -0800
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears/1" for 127.0.0.1 at 2016-02-01 08:36:07 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (4.8ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered bears/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 08:36:36 -0800
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bears/_form.html.erb (1.3ms)
+  Rendered bears/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears/1/delete" for 127.0.0.1 at 2016-02-01 08:36:44 -0800
+
+ActionController::RoutingError (No route matches [GET] "/bears/1/delete"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/julia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/julia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/julia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.7ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/julia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.0ms)
+
+
+Started PATCH "/bears/1" for 127.0.0.1 at 2016-02-01 08:38:37 -0800
+Processing by BearsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pAzKT/K2BoFCMPkBThq92SAsGIRCzmAalIyf+9IKeZL1yXO3BKnqVRRFavMkK3zSALVnqROd3H7QDIU/7XzLJg==", "bear"=>{"name"=>"Fozzy", "description"=>"A hilarious bear that has been updated"}, "commit"=>"Update Bear", "id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/bears/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/bears/1" for 127.0.0.1 at 2016-02-01 08:38:37 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bears/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.2ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:03 -0800
+
+
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (1.5ms)
+  Rendered bears/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:05 -0800
+
+
+Started POST "/bears" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+Processing by BearsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wM6ST90QcC9QlZWIWUQHy+hn1eKcMxrNG5Xdw1VuM6qRCyu3Kw+c+wbgBnozdcbAyP6qz81gpqlfFccHahiBHg==", "bear"=>{"name"=>"Bear to delete", "description"=>"dddd"}, "commit"=>"Create Bear"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "bears" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Bear to delete"], ["description", "dddd"], ["created_at", "2016-02-01 16:39:09.086954"], ["updated_at", "2016-02-01 16:39:09.086954"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bears/8
+Completed 302 Found in 10ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/bears/8" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered bears/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:09 -0800
+
+
+Started DELETE "/bears/8" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+Processing by BearsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cawzRpVhKxEVHi4z1b6i3XQIOdXq0ktXvbMyvrGHsGMgaYq+Y37HxUNrvcG/j2PWVJFG+LuB9zP5Myh6jvEC1w==", "id"=>"8"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "bears" WHERE "bears"."id" = ?[0m  [["id", 8]]
+  [1m[35m (9.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/bears
+Completed 302 Found in 12ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.2ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:39:15 -0800
+
+
+Started GET "/bears/5" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+Processing by BearsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered bears/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:33 -0800
+
+
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bears.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/bears.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 08:50:42 -0800

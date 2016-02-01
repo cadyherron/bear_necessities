@@ -36,7 +36,7 @@ class BearsController < ApplicationController
       flash[:success] = "Bear '#{@bear.name}' successfully updated"
       redirect_to @bear
     else
-      flash[:error] = "Bear '#{@bear.name}' was not updated"
+      flash.now[:error] = "Bear '#{@bear.name}' was not updated"
       render :edit
     end
   end
