@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  root "bears#index"
+  resources :bears
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

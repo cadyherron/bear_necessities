@@ -1,0 +1,6 @@
+<h3><%= @bear.name %></h3>
+<p><%= @bear.description %></p>
+
+<%= link_to "Back to all bears", bears_path %>
+<%= link_to "Edit this bear", edit_bear_path(@bear) %>
+<%= link_to "Delete this bear", bear_path(@bear), method: :delete %>

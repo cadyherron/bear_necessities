@@ -1,0 +1,9 @@
+<h3>Welcome to Bear Territory!</h3>
+
+
+<ul>
+<% @bears.each do |bear| %>
+  <li><%= link_to bear.name, bear_path(bear) %></li>
+<% end %>
+
+</ul>
